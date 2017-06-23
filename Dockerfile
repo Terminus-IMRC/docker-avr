@@ -9,7 +9,7 @@ RUN apt-get update \
 
 RUN useradd imrc -m -b /home \
  && echo 'imrc:imrc' | chpasswd \
- && usermod -G root,sudo,staff,tty,dialout \
+ && usermod -G root,sudo,staff,tty,dialout imrc \
  && echo 'imrc ALL = NOPASSWD : ALL' >>/etc/sudoers.d/imrc \
  && chown imrc.imrc -R /home/imrc
 

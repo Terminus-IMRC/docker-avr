@@ -2,7 +2,7 @@ FROM debian
 
 RUN apt-get update \
  && apt-get upgrade -y \
- && apt-get install -y sudo make python python-pip htop tmux less \
+ && apt-get install -y sudo make python python-pip htop tmux less vim \
                        gcc-avr avrdude arduino picocom \
  && apt-get clean \
  && pip2 install ino
